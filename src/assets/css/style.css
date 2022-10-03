@@ -1,0 +1,143 @@
+/* -- header --*/
+
+.HeaderNav{
+    background-image: url("../images/Header Vinos 1.jpg");
+    background-size: cover;
+    width: 100%;
+    margin: 0px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.LinkNav{
+    text-decoration: none;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+    padding: 10px
+}
+.LinkNav:after{
+    content: "";
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color:#bebebe;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 800ms ease-in-out;
+}
+.LinkNav:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.bodyApp {
+    background-color:#ebebeb;
+}
+/* -- HOME --*/
+.cuerpo{
+    background-image: url("../images/vino1.jpg");
+    background-size:cover;
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 200px;
+    
+    
+}
+.tituloHome {
+    color: aliceblue;
+    align-self: center;
+    text-align: center;
+}
+.tituloHome2 {
+    color: aliceblue;
+    align-self: center;
+    text-align: center;
+    text-decoration:none
+
+}
+/* -- ANIMACION DEL LOGO --*/
+.containerHome{
+    
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100vw;
+    height: 100vh;
+}
+.boxHome{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-image: url("../images/logo.jpeg");
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                0 6px 20px 0 #686FFD;
+    animation: animate 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+               
+}
+@keyframes animate {
+    0%{
+        width: 0vw;
+        height: 0vh;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    25%{
+        width: 5vw;
+        height: 5vh;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    50%{
+        width: 60px;
+        height: 240px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    70%{
+        width: 480px;
+        height: 240px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    100%{
+        width: 480px;
+        height: 480px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+}
+
+
+.Separador{
+    width: 100%;
+    background-color: #6d0f1c;
+    padding: 15px;
+}
+
+
+/* -- FOOTER --*/
+.Footer{
+    background-color: #6d0f1c;
+    width: 100%;
+    margin: 0px;
+    padding: 15px;
+    border: 0px;
+    color: white;
+
+}
+.contactanos{
+    margin:0px;
+}
+#copy{
+    margin:0px;
+}
