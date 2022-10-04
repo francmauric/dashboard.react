@@ -17,7 +17,7 @@ function ApiUserDetail() {
     
     return(
         <div>
-            <h2>componente de usuario</h2>
+            <h2>Detalle de usuario</h2>
             <ul>
             { personajes.length === 0 && <p>Cargando</p>}
                 { 

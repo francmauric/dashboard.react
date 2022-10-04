@@ -24,16 +24,18 @@ function ApiUsuario() {
                 { 
                    personajes.map((personaje,i) =>{
                         return (
+                            
                              <li key={i}>
                                 <h3>{personaje.name}</h3>
-                                <img src={personaje.picture} alt="avatar" width="150" /><br />
-                                <Link to="/apiUsuario/detail">UserDetail </Link>
-                                <Route path='/apiUsuario/detail' component={ApiUserDetail} />
+                                <img src={"http://localhost:3100/images/users/" + personaje.picture} alt="avatar" width="150" /><br />
+                                <Link to="/apiUsuario/detail"> UserDetail </Link>
+                                
                              </li>   
                         )
                     })
                     }
             </ul>
+            <Route path='/apiUsuario/detail' component={ApiUserDetail} />
         </div>
     )
 }

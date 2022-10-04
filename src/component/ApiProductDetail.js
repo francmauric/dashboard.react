@@ -14,7 +14,8 @@ function ApiProductDetail(){
              })
              .catch(error => console.error(error));
      }, [])
-         
+     let idProducts = products.user_id
+         console.log(idProducts)
     return(
             <div>
                 
@@ -28,7 +29,7 @@ function ApiProductDetail(){
                         return ( */
                              <li /* key={i} */>
                                 <h3>{products.name}</h3>
-                                <img src={products.image} alt="avatar" width="150" />
+                                <img src={"http://localhost:3100/images/" + products.image} alt="avatar" width="150" />
                              </li>   
                         /* )
                     }) */

@@ -4,6 +4,7 @@ import ApiProductDetail from "./ApiProductDetail";
 import {Link, Route} from "react-router-dom"
 
 function ApiProducts(){
+    
     const [products, setProducts] = useState([]);
     console.log(products)
      useEffect(()=> {
@@ -29,15 +30,15 @@ function ApiProducts(){
                         return (
                              <li key={i}>
                                 <h3>{products.name}</h3>
-                                <img src={products.image} alt="avatar" width="150" />
+                                <img src={"http://localhost:3100/images/" + products.image} alt="avatar" width="150" />
                                 <div>
-                                    <Link to="ApiProducts/detail">Detalle de Producto</Link>
-                                    <Route path="ApiProducts/detail" component={ApiProductDetail} />
+                                    <Link to="/ApiProducts/detail/:id">Detalle de Producto</Link>
+                                    <Route path="/ApiProducts/detail" component={ApiProductDetail} />
                                 </div>
                              </li>   
                         )
                     })
-                    }
+                    }   
             </ul>
             </div>
     )
