@@ -1,7 +1,7 @@
 import React from "react";
 import {useState , useEffect } from "react";
-import ApiProductDetail from "./ApiProductDetail";
-import {Link, Route} from "react-router-dom"
+
+import {Link} from "react-router-dom"
 
 function ApiProducts(){
     
@@ -32,8 +32,8 @@ function ApiProducts(){
                                 <h3>{products.name}</h3>
                                 <img src={"http://localhost:3100/images/" + products.image} alt="avatar" width="150" />
                                 <div>
-                                    <Link to="/ApiProducts/detail/:id">Detalle de Producto</Link>
-                                    <Route path="/ApiProducts/detail" component={ApiProductDetail} />
+                                    <Link to={`/apiProducts/detail/${products.product_id}`}>Detalle de Producto</Link>
+                                   
                                 </div>
                              </li>   
                         )

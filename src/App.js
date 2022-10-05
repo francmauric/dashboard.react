@@ -1,11 +1,12 @@
-import {Route, Link} from "react-router-dom"
+import {Route, Link, Switch} from "react-router-dom"
 import ApiUsuario from "./component/ApiUsuarios";
 import Home from './component/Home';
 import ApiProducts from "./component/ApiProducts";
 import Footer from "./component/Footer";
-
+import ApiProductDetail from "./component/ApiProductDetail";
 function App() {
   return (
+    
     <div className="bodyApp">
         
       <div className="HeaderNav">
@@ -19,9 +20,14 @@ function App() {
         <div className="Separador">
 
         </div>
+    <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/apiUsuario" component={ApiUsuario} />
       <Route path="/apiProducts" component={ApiProducts} />
+      <Route path="/apiProducts/detail/:id">
+        <ApiProductDetail />
+      </Route>
+      </Switch>   
         <Footer />
     </div>
   );
