@@ -21,14 +21,13 @@ function App() {
 
         </div>
     <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/apiUsuario" component={ApiUsuario} />
-      <Route path="/apiProducts" component={ApiProducts} />
-      <Route path="/apiProducts/detail/:id">
-        <ApiProductDetail />
-      </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/apiUsuario" component={ApiUsuario} />
+          <Route path="/apiProducts" component={ApiProducts} />
+          <Route path="/apiProducts/detail/:id">
+          <ApiProductDetail />
+        </Route>
       </Switch>   
-        <Footer />
     </div>
   );
 }

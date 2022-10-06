@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 /* -- header --*/
 
 .HeaderNav{
@@ -156,4 +160,131 @@
 }
 #copy{
     margin:0px;
+}
+
+/* --Productos --*/
+
+.titulo-productos{
+    text-align: center;
+}
+
+.listado-productos{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.detalle-producto{
+    border-radius: 2%;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    justify-content: center;
+    align-items: center;
+}
+.imagen-producto{
+    max-height: 100px;
+    padding: 5px;
+    margin: 1px;
+    max-width: 70px;
+}
+
+.nombre-vino{
+    text-align: center;
+}
+
+.producto-precio{
+    border-radius: 3%;
+    background-color: #6d0f1c;
+    width: 90%;
+    padding: 3px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 2px;
+}
+
+.producto-descuento{
+    border-radius: 3%;
+    background-color: green;
+    width: 90%;
+    padding: 3px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 2px;
+}
+
+.producto-stock{
+    border-radius: 3%;
+    background-color: grey;
+    width: 90%;
+    padding: 3px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 2px;
+}
+
+.producto-premios{
+    border-radius: 3%;
+    background-color: goldenrod;
+    width: 90%;
+    padding: 3px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 2px;
+}
+
+.paneles-vinos{
+    display: flex;
+    justify-content: space-around;
+    max-width: 650px;
+    align-items: center;
+    margin: auto
+
+}
+
+.panel-vino-andino{
+    border-radius: 5%;
+    background-color: rgb(187, 135, 5);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.panel-vino-patagonico{
+    border-radius: 5%;
+    background-color: rgb(4, 120, 158);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.panel-vino-importado{
+    border-radius: 5%;
+    background-color: #35060d;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+
 }
