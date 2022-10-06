@@ -8,7 +8,11 @@ function Home(){
             <section className="cuerpo">
               <div className="Home"> 
                   <h1 className="tituloHome">ADMINISTRADOR</h1>
-                
+              </div>
+              <div className="paneles">
+                <div className="panel">Total productos</div>
+                <div className="panel">Total categorías</div>
+                <div className="panel">Total usuarios</div>
               </div>
               
                  <div className="containerHome">
