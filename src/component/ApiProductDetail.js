@@ -4,22 +4,23 @@ import {useParams} from "react-router-dom"
 
 function ApiProductDetail(){
     let { id } = useParams();
-     
-    const [products, setProducts] = useState([]);
-    console.log(products)
+
+    const [product, setProduct] = useState([]);
+
      useEffect(()=> {
          console.log("%cse montó el componente", "color: green");
          fetch("http://localhost:3100/api/products/" + id)
              .then(response => response.json())
              .then(data => {
-                 setProducts(data.data)
+                 setProduct(data.data) //product es un objeto
              })
              .catch(error => console.error(error));
      }, [])
-     
+
     return(
-            <div>
-                prueba { id}
+           <div>
+            <h2>{product.name}</h2>
+            <img src={product.image} alt='vino'/>
             </div>
     )
 }

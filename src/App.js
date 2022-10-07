@@ -6,16 +6,16 @@ import Footer from "./component/Footer";
 import ApiProductDetail from "./component/ApiProductDetail";
 function App() {
   return (
-    
+
     <div className="bodyApp">
-        
+
       <div className="HeaderNav">
-        <Link className="LinkNav" to="/">  Home  </Link> 
-        <Link className="LinkNav" to="/apiUsuario"> Usuarios</Link> 
+        <Link className="LinkNav" to="/">  Home  </Link>
+        <Link className="LinkNav" to="/apiUsuario"> Usuarios</Link>
         <Link className="LinkNav" to="/apiProducts"> Productos</Link>
-      
-    
-     
+
+
+
       </div>
         <div className="Separador">
 
@@ -24,10 +24,10 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/apiUsuario" component={ApiUsuario} />
           <Route path="/apiProducts" component={ApiProducts} />
-          <Route path="/apiProducts/detail/:id">
+          <Route path="/detail/:id">
           <ApiProductDetail />
         </Route>
-      </Switch>   
+      </Switch>
     </div>
   );
 }
