@@ -16,7 +16,15 @@ function ApiProducts(){
              })
              .catch(error => console.error(error));
      }, [])
-
+     /* products.map((product,i)=>{
+        if(product.category.name === "Andino")
+        console.log(product.category.name)
+        let suma = + 1
+        return(
+        
+        
+     )})
+     console.log(suma) */
     return(
             <div>
                 <h1 className="titulo-productos">Vinos por categoría</h1>
@@ -24,7 +32,7 @@ function ApiProducts(){
                 <div className="paneles-vinos">
                     <div className="panel-vino-andino">
                         Vinos Andinos:
-
+                        
                     </div>
                     <div className="panel-vino-patagonico">
                         Vinos Patagónicos:

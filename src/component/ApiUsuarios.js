@@ -1,9 +1,11 @@
 import {useState , useEffect } from "react";
 import {Link, Route} from "react-router-dom";
 import ApiUserDetail from "./ApiUserDetail"
-function ApiUsuario() {
+function ApiUsuario(props) {
+    console.log()
+    /* personajes  = props */
     const [personajes, setPersonajes] = useState([]);
-   console.log(personajes)
+   console.log(personajes.length)
     useEffect(()=> {
         console.log("%cse montó el componente", "color: green");
         fetch("http://localhost:3100/api/users")
@@ -13,15 +15,17 @@ function ApiUsuario() {
             })
             .catch(error => console.error(error));
     }, [])
-        
+   
     
     
     return(
         <div>
             <h2>componente de usuario</h2>
+            <h1>{props.personajes}</h1>
             <ul>
             { personajes.length === 0 && <p>Cargando</p>}
                 { 
+                
                    personajes.map((personaje,i) =>{
                         return (
                             
@@ -35,6 +39,9 @@ function ApiUsuario() {
                     })
                     }
             </ul>
+            <div>
+                
+            </div>
             <Route path='/apiUsuario/detail' component={ApiUserDetail} />
         </div>
     )
