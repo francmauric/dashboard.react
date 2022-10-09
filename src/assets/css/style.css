@@ -1,25 +1,46 @@
 *{
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* -- header --*/
 
+
+.logo-oracle{
+    width: 120px;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
 .HeaderNav{
-    background-image: url("../images/Header Vinos 1.jpg");
-    background-size: cover;
+    background-color: darkgrey;
     width: 100%;
     margin: 0px;
-    padding: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
+.enlaces-nav{
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .LinkNav{
     text-decoration: none;
-    font-size: 40px;
+    font-size: 30px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: auto;
-    padding: 10px
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    transition: all 450ms;
 }
 .LinkNav:after{
     content: "";
@@ -38,6 +59,11 @@
     transform-origin: left;
     transform: scaleX(1);
 }
+
+.LinkNav:hover{
+    color: #660c1a;
+}
+
 .bodyApp {
     background-color:#ebebeb;
 }
@@ -63,69 +89,29 @@
     text-decoration:none
 
 }
-/* -- ANIMACION DEL LOGO --*/
-.containerHome{
-    
-    box-sizing: border-box;
+
+/* -- Paneles --*/
+.body-home{
+    background-color: #cfcaca;
+}
+
+.cuerpo-paneles{
+    max-width: 800px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items:center;
-    width: 100vw;
-    height: 100vh;
-}
-.boxHome{
-    width: 5vw;
-    height: 5vw;
-    border-radius: 50%;
-    background-image: url("../images/logo.jpeg");
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
-                0 6px 20px 0 #686FFD;
-    animation: animate 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
-               
-}
-@keyframes animate {
-    0%{
-        width: 0vw;
-        height: 0vh;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
-                    0 6px 20px 0 #686FFD
-    }
-    25%{
-        width: 5vw;
-        height: 5vh;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
-                    0 6px 20px 0 #686FFD
-    }
-    50%{
-        width: 60px;
-        height: 240px;
-        border-radius: 25px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
-                    0 6px 20px 0 #686FFD
-    }
-    70%{
-        width: 480px;
-        height: 240px;
-        border-radius: 25px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
-                    0 6px 20px 0 #686FFD
-    }
-    100%{
-        width: 480px;
-        height: 480px;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
-                    0 6px 20px 0 #686FFD
-    }
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 .paneles{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    max-width: 800px;
+    margin-top: 20px;
 }
 
 .panel{
@@ -133,17 +119,91 @@
     color: black;
     font-size: 30px;
     width: 250px;
-    height: 150px;
+    height: 100px;
     text-align: center;
     border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.Separador{
-    width: 100%;
-    background-color: #6d0f1c;
-    padding: 15px;
+
+.paneles-vinos{
+    display: flex;
+    justify-content: space-around;
+    max-width: 650px;
+    align-items: center;
+    margin: auto;
+
 }
 
+.panel-vino-andino{
+    border-radius: 5%;
+    background-color: rgb(187, 135, 5);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.panel-vino-patagonico{
+    border-radius: 5%;
+    background-color: rgb(4, 120, 158);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.panel-vino-importado{
+    border-radius: 5%;
+    background-color: #35060d;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+/* -- Último Producto --*/
+
+.seccion-inferior{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+}
+
+.ultimo-producto{
+    background-color: white;
+    border-radius: 5%;
+    height: 400px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 20px
+}
+
+.ultProdTitulo{
+    padding: 10px;
+}
 
 /* -- FOOTER --*/
 .Footer{
@@ -241,50 +301,119 @@
     margin-bottom: 2px;
 }
 
-.paneles-vinos{
+
+
+/* --Usuarios--*/
+
+.userInfo{
+    border-radius: 2%;
+    width: 300px;
     display: flex;
-    justify-content: space-around;
-    max-width: 650px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    justify-content: center;
     align-items: center;
-    margin: auto
-
+    margin-top: 10px;
 }
 
-.panel-vino-andino{
-    border-radius: 5%;
-    background-color: rgb(187, 135, 5);
-    color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 200px;
-    height: 90px;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-
+.listado-usuarios{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
 }
 
-.panel-vino-patagonico{
-    border-radius: 5%;
-    background-color: rgb(4, 120, 158);
-    color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 200px;
-    height: 90px;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-
+.userData{
+    padding: 3px;
 }
 
-.panel-vino-importado{
-    border-radius: 5%;
-    background-color: #35060d;
-    color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 200px;
-    height: 90px;
-    font-size: 20px;
+.lista-users{
     text-align: center;
-    padding: 10px;
+}
 
+.userData{
+    border-radius: 3%;
+    background-color: grey;
+    width: 90%;
+    padding: 3px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 2px;
+}
+
+.userDetail{
+    text-decoration: none;
+    background-color: #6d0f1c;
+    color: white;
+    padding: 3px;
+    margin-top: 10px;
+    width: 150px;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+
+/* -- ANIMACION DEL LOGO --*/
+.containerHome{
+    
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+}
+.boxHome{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-image: url("../images/logo.jpeg");
+    background-size: 240px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                0 6px 20px 0 #686FFD;
+    animation: animate 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+               
+}
+@keyframes animate {
+    0%{
+        width: 0vw;
+        height: 0vh;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    25%{
+        width: 5vw;
+        height: 5vh;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    50%{
+        width: 30px;
+        height: 120px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    70%{
+        width: 240px;
+        height: 120px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
+    100%{
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                    0 6px 20px 0 #686FFD
+    }
 }

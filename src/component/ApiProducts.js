@@ -26,24 +26,7 @@ function ApiProducts(){
      )})
      console.log(suma) */
     return(
-            <div>
-                <h1 className="titulo-productos">Vinos por categoría</h1>
-
-                <div className="paneles-vinos">
-                    <div className="panel-vino-andino">
-                        Vinos Andinos:
-                        
-                    </div>
-                    <div className="panel-vino-patagonico">
-                        Vinos Patagónicos:
-
-                    </div>
-                    <div className="panel-vino-importado">
-                        Vinos Importados:
-
-                    </div>
-
-                </div>
+            <div className="body-productos">
 
                 <h1 className="titulo-productos">Listado de Productos</h1>
 

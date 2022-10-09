@@ -4,22 +4,24 @@ import Home from './component/Home';
 import ApiProducts from "./component/ApiProducts";
 import Footer from "./component/Footer";
 import ApiProductDetail from "./component/ApiProductDetail";
+import logoOracle from "./assets/images/logo.jpeg"
+
 function App() {
   return (
 
     <div className="bodyApp">
 
       <div className="HeaderNav">
-        <Link className="LinkNav" to="/">  Home  </Link>
-        <Link className="LinkNav" to="/apiUsuario"> Usuarios</Link>
-        <Link className="LinkNav" to="/apiProducts"> Productos</Link>
-
+        <img src={logoOracle} className="logo-oracle" alt="Oracle Wines"/>
+        <div className="enlaces-nav">
+          <Link className="LinkNav" to="/">Home</Link>
+          <Link className="LinkNav" to="/apiUsuario">Usuarios</Link>
+          <Link className="LinkNav" to="/apiProducts">Productos</Link>
+        </div>
 
 
       </div>
-        <div className="Separador">
 
-        </div>
     <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/apiUsuario" component={ApiUsuario} />
