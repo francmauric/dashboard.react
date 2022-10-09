@@ -2,11 +2,14 @@ import {Route, Link, Switch} from "react-router-dom"
 import ApiUsuario from "./component/ApiUsuarios";
 import Home from './component/Home';
 import ApiProducts from "./component/ApiProducts";
-import Footer from "./component/Footer";
+import ApiUserDetail from "./component/ApiUserDetail"
 import ApiProductDetail from "./component/ApiProductDetail";
 import logoOracle from "./assets/images/logo.jpeg"
 
 function App() {
+
+
+
   return (
 
     <div className="bodyApp">
@@ -28,6 +31,9 @@ function App() {
           <Route path="/apiProducts" component={ApiProducts} />
           <Route path="/detail/:id">
           <ApiProductDetail />
+          </Route>
+        <Route path="/detailUser/:id">
+          <ApiUserDetail />
         </Route>
       </Switch>
     </div>

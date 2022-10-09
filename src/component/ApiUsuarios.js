@@ -1,6 +1,6 @@
 import {useState , useEffect } from "react";
-import {Link, Route} from "react-router-dom";
-import ApiUserDetail from "./ApiUserDetail"
+import {Link} from "react-router-dom";
+
 function ApiUsuario(props) {
     console.log()
     /* personajes  = props */
@@ -33,8 +33,8 @@ function ApiUsuario(props) {
                                     <img className="userImage" src={"http://localhost:3100/images/users/" + personaje.picture} alt="avatar" width="150" /><br />
                                     <div className="userData">{personaje.email}</div>
                                     <div className="userData">{personaje.userName}</div>
-                                    <Link className="userDetail" to="/apiUsuario/detail"> Detalle de Usuario </Link>
-                                    
+                                    {/* <Link className="userDetail" to="/apiUsuario/detail"> Detalle de Usuario </Link> */}
+                                    <Link className="userDetail" to={`/detailUser/${personaje.user_id}`}>Detalle de Usuario</Link>
                                 </div>   
                             )
                         })
@@ -43,7 +43,7 @@ function ApiUsuario(props) {
             <div>
                 
             </div>
-            <Route path='/apiUsuario/detail' component={ApiUserDetail} />
+           
         </div>
     )
 }

@@ -4,6 +4,7 @@ import {useState , useEffect } from "react";
 
 function Home(){
     const [personajes, setPersonajes] = useState([]);
+    /* console.log(personajes.length) */
     useEffect(()=> {
         console.log("%cse montó el componente", "color: green");
         fetch("http://localhost:3100/api/users")
@@ -13,9 +14,11 @@ function Home(){
             })
             .catch(error => console.error(error));
     }, [])
-
+    
+   
+   
     const [products, setProducts] = useState([]);
-    console.log(products)
+    console.log(products[products.length-1]); 
      useEffect(()=> {
          console.log("%cse montó el componente", "color: green");
          fetch("http://localhost:3100/api/products")
@@ -25,15 +28,20 @@ function Home(){
              })
              .catch(error => console.error(error));
      }, [])
+     
+     /* const ultimoProducto = products[products.length-1]
+     console.log(ultimoProducto) */
+    
+
 
      const [productsCategory, setProductsCategory] = useState([]);
-     console.log(products)
+    /*  console.log(productsCategory) */
       useEffect(()=> {
           console.log("%cse montó el componente", "color: green");
           fetch("http://localhost:3100/api/products")
               .then(response => response.json())
               .then(data => {
-                setProductsCategory(data.meta)
+                setProductsCategory(data.meta.countByCategory)
               })
               .catch(error => console.error(error));
       }, [])
@@ -48,6 +56,7 @@ function Home(){
                         </div>
                         <div className="panel">Total usuarios
                             <div>{personajes.length}<br/>
+
                         </div>
                     </div>
                         </div>
@@ -57,15 +66,21 @@ function Home(){
                         <div className="paneles-vinos">
                             <div className="panel-vino-andino">
                                 Vinos Andinos:
-                                
+                                <div>
+                                {productsCategory.andino}
+                                </div>
                             </div>
                             <div className="panel-vino-patagonico">
                                 Vinos Patagónicos:
-                                
+                                <div>
+                                {productsCategory.patagonicos}
+                                </div>
                             </div>
                             <div className="panel-vino-importado">
                                 Vinos Importados:
-                                
+                                <div>
+                                {productsCategory.importados}
+                                </div>
                             </div>
 
                         </div>
@@ -77,9 +92,9 @@ function Home(){
                         <h2 className="ultProdTitulo">Último Producto:</h2>
 
                         <div className="ultProdImagen">
-                            Imagen
+                                
                         </div>
-                        <div>Lorem</div>
+                        <div>lorum</div>
                     </div>
                     
                     <div className="containerHome">
@@ -88,7 +103,10 @@ function Home(){
                         </a>
                     
                     </div>
-                </div>      
+                </div>    
+                <div>
+                   
+                    </div>  
             
         </div>
     )
