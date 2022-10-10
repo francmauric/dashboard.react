@@ -195,8 +195,7 @@
 .ultimo-producto{
     background-color: white;
     border-radius: 5%;
-    height: 400px;
-    width: 300px;
+    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 20px;
     
@@ -205,7 +204,11 @@
     width: 20px;
     
 }
-
+.NombreUltPro{
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
 .ultProdImagen{
     padding: 10px;
     

@@ -50,7 +50,7 @@ function Home({ products, personajes, productsCategory }) {
                        
                        
                    </div>
-                    <div>{ultimoProducto ? ultimoProducto.name : "Loading..."}</div>
+                    <div className="NombreUltPro">{ultimoProducto ? ultimoProducto.name : "Loading..."}</div> <br/>
                 </div>
 
                 <div className="containerHome">
