@@ -1,37 +1,71 @@
-import {Route, Link, Switch} from "react-router-dom"
+import { useState, useEffect } from "react";
+import { Route, Link, Switch } from "react-router-dom";
 import ApiUsuario from "./component/ApiUsuarios";
-import Home from './component/Home';
 import ApiProducts from "./component/ApiProducts";
-import ApiUserDetail from "./component/ApiUserDetail"
+import ApiUserDetail from "./component/ApiUserDetail";
 import ApiProductDetail from "./component/ApiProductDetail";
-import logoOracle from "./assets/images/logo.jpeg"
+import Home from "./component/Home";
+import logoOracle from "./assets/images/logo.jpeg";
 
 function App() {
+  const [products, setProducts] = useState([]);
+  const [productsCategory, setProductsCategory] = useState([]);
 
+  useEffect(() => {
+    fetch("http://localhost:3100/api/products")
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data.data);
+        setProductsCategory(data.meta.countByCategory);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
+  const [personajes, setPersonajes] = useState([]);
+  useEffect(() => {
+    console.log("%cse montó el componente", "color: green");
+    fetch("http://localhost:3100/api/users")
+      .then((response) => response.json())
+      .then((data) => {
+        setPersonajes(data.data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
   return (
-
     <div className="bodyApp">
-
       <div className="HeaderNav">
-        <img src={logoOracle} className="logo-oracle" alt="Oracle Wines"/>
+        <img src={logoOracle} className="logo-oracle" alt="Oracle Wines" />
         <div className="enlaces-nav">
-          <Link className="LinkNav" to="/">Home</Link>
-          <Link className="LinkNav" to="/apiUsuario">Usuarios</Link>
-          <Link className="LinkNav" to="/apiProducts">Productos</Link>
+          <Link className="LinkNav" to="/">
+            Home
+          </Link>
+          <Link className="LinkNav" to="/apiUsuario">
+            Usuarios
+          </Link>
+          <Link className="LinkNav" to="/apiProducts">
+            Productos
+          </Link>
         </div>
-
-
       </div>
 
-    <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/apiUsuario" component={ApiUsuario} />
-          <Route path="/apiProducts" component={ApiProducts} />
-          <Route path="/detail/:id">
+      <Switch>
+        <Route exact path="/">
+          <Home products={products} personajes={personajes} productsCategory={productsCategory} />
+        </Route>
+
+        <Route path="/apiUsuario">
+          <ApiUsuario personajes={personajes} />
+        </Route>
+
+        <Route path="/apiProducts">
+          <ApiProducts products={products} />
+        </Route>
+
+        <Route path="/detail/:id">
           <ApiProductDetail />
-          </Route>
+        </Route>
+
         <Route path="/detailUser/:id">
           <ApiUserDetail />
         </Route>
@@ -39,7 +73,6 @@ function App() {
     </div>
   );
 }
-
 export default App;
 
 

@@ -198,11 +198,18 @@
     height: 400px;
     width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 20px
+    margin: 20px;
+    
+}
+.imagenUltimoProducto{
+    width: 20px;
+    
 }
 
-.ultProdTitulo{
+.ultProdImagen{
     padding: 10px;
+    
+    
 }
 
 /* -- FOOTER --*/
@@ -221,6 +228,13 @@
 #copy{
     margin:0px;
 }
+/* --Home --*/
+.ultimoProductoImg{
+    width: 300px;
+}
+
+
+
 
 /* --Productos --*/
 
