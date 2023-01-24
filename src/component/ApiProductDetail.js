@@ -9,7 +9,7 @@ function ApiProductDetail(){
 
      useEffect(()=> {
          console.log("%cse montó el componente", "color: green");
-         fetch("http://localhost:3100/api/products/" + id)
+         fetch("https://oraclewines.onrender.com/api/products/" + id)
              .then(response => response.json())
              .then(data => {
                  setProduct(data.data) //product es un objeto

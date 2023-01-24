@@ -12,7 +12,7 @@ function App() {
   const [productsCategory, setProductsCategory] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3100/api/products")
+    fetch("https://oraclewines.onrender.com/api/products")
       .then((response) => response.json())
       .then((data) => {
         setProducts(data.data);
@@ -24,7 +24,7 @@ function App() {
   const [personajes, setPersonajes] = useState([]);
   useEffect(() => {
     console.log("%cse montó el componente", "color: green");
-    fetch("http://localhost:3100/api/users")
+    fetch("https://oraclewines.onrender.com/api/users")
       .then((response) => response.json())
       .then((data) => {
         setPersonajes(data.data);
