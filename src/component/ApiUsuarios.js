@@ -15,7 +15,7 @@ function ApiUsuario({ personajes }) {
               <h3 class="userName">{personaje.name}</h3>
               <img
                 className="userImage"
-                src={"http://localhost:3100/images/users/" + personaje.picture}
+                src={"https://oraclewines.onrender.com/images/users/" + personaje.picture}
                 alt="avatar"
                 width="150"
               />

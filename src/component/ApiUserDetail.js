@@ -7,7 +7,7 @@ function ApiUserDetail() {
 
   useEffect(() => {
     console.log("%cse montó el componente", "color: green");
-    fetch("http://localhost:3100/images/users/" + id)
+    fetch("https://oraclewines.onrender.com/api/users/" + id)
       .then((response) => response.json())
       .then((data) => {
         setPersonajes(data.data);

@@ -44,8 +44,8 @@ function Home({ products, personajes, productsCategory }) {
                     
 
                     <div className="ultProdImagen">
-                    <h2 className="ultProdTitulo">Último Producto:</h2>
-                        {ultimoProducto &&  <img clasName ="imagen-producto" src={"http://localhost:3100/images/" + ultimoProducto.image }  alt="avatar"
+                    <h2 className="ultProdTitulo">Último Producto</h2>
+                        {ultimoProducto &&  <img clasName ="imagen-producto" src={"https://oraclewines.onrender.com/images/" + ultimoProducto.image }  alt="avatar"
                 width="250"/>}
                        
                        
@@ -54,7 +54,7 @@ function Home({ products, personajes, productsCategory }) {
                 </div>
 
                 <div className="containerHome">
-                    <a className="tituloHome2" href="http://localhost:3100/">
+                    <a className="tituloHome2" href="https://oraclewines.onrender.com/">
                         <div className="boxHome"> </div>
                     </a>
                 </div>

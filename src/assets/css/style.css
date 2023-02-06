@@ -195,13 +195,19 @@
 .ultimo-producto{
     background-color: white;
     border-radius: 5%;
-    
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 20px;
     
+    
+}
+.imagen-producto{
+    display: flex;
+    align-self: center;
 }
 .imagenUltimoProducto{
-    width: 20px;
+    
     
 }
 .NombreUltPro{
@@ -211,6 +217,10 @@
 }
 .ultProdImagen{
     padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
     
     
 }
@@ -234,6 +244,7 @@
 /* --Home --*/
 .ultimoProductoImg{
     width: 300px;
+
 }
 
 
@@ -262,6 +273,11 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     justify-content: center;
     align-items: center;
+    margin: 5%;
+}
+.detalle-producto:hover{
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    
 }
 .imagen-producto{
     max-height: 100px;

@@ -24,7 +24,7 @@ function ApiProducts({ products }) {
               <h4 className="nombre-vino">{products.name}</h4>
               <img
                 className="imagen-producto"
-                src={"https://oraclewines.onrender.com//images/" + products.image}
+                src={"https://oraclewines.onrender.com/images/" + products.image}
                 alt="avatar"
                 width="150"
               />
